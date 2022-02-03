@@ -5,7 +5,10 @@ const app = express();
 
 app.use(express.json());
 
-const cursos = ['FullStack Master', 'Desenvolvimento de Games', 'Viver de Youtube'];
+const cursos = [nome= "jegue", 
+                sobrenome = 'Santos', 
+                idade = 17,
+                nascimento = "2004/03/15"];
 
 // Retorna um curso, get
 app.get('/cursos/:index', (req,res) =>{
@@ -18,6 +21,8 @@ app.get('/cursos/:index', (req,res) =>{
 app.get('/cursos', (req, res) =>{
     return res.json(cursos);
 });
+
+
 
 //criar um novo curso, requisição post
 
@@ -49,3 +54,5 @@ app.delete('/cursos/:index', (req,res)=>{
 
 
 app.listen(8081);
+
+//Insomnia
